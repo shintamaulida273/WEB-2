@@ -36,19 +36,19 @@ require_once "data-form-regis.php"
                             <i class="fa fa-address-book"></i>
                         </div>
                         </div> 
-                        <input id="nama_lengkap" name="nama_lengkap" placeholder="*Niana Guerrero" type="text" class="form-control" required="required" minlength="3" maxlength="50">
+                        <input id="nama_lengkap" name="nama_lengkap" placeholder="*Nama Lengkap" type="text" class="form-control" required="required" minlength="3" maxlength="50">
                     </div>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-4">Jenis Kelamin</label> 
+                <label class="col-4">Jenis Kelamin</label> 
                     <div class="col-8">
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input name="jenis_kelamin" id="jenis_kelamin_0" type="radio" class="custom-control-input" value="laki-laki" required="required" checked> 
+                        <input name="jenis_kelamin" id="jenis_kelamin_0" type="radio" required="required" class="custom-control-input" value="L"> 
                         <label for="jenis_kelamin_0" class="custom-control-label">Laki-Laki</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input name="jenis_kelamin" id="jenis_kelamin_0" type="radio" class="custom-control-input" value="perempuan" required="required"> 
+                        <input name="jenis_kelamin" id="jenis_kelamin_1" type="radio" required="required" class="custom-control-input" value="P" checked="checked"> 
                         <label for="jenis_kelamin_1" class="custom-control-label">Perempuan</label>
                     </div>
                     </div>
