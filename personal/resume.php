@@ -22,14 +22,14 @@
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
                 <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Start Bootstrap</span></a>
+                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Shinta Maulida Distiandini</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="resume.php">Resume</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.php">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -58,18 +58,18 @@
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-primary fw-bolder mb-2">2019 - Present</div>
-                                                <div class="small fw-bolder">Web Developer</div>
-                                                <div class="small text-muted">Stark Industries</div>
-                                                <div class="small text-muted">Los Angeles, CA</div>
+                                                <div class="text-primary fw-bolder mb-2">January - July 2023</div>
+                                                <div class="small fw-bolder">Customer Service</div>
+                                                <div class="small text-muted">BJB Bank</div>
+                                                <!-- <div class="small text-muted">Los Angeles, CA</div> -->
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</div></div>
+                                        <div class="col-lg-8"><div>Memeriksa kelengkapan berkas customer kredit, memberikan pelayanan terhadap nasabah dan pengarsipan.</div></div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Experience Card 2-->
-                            <div class="card shadow border-0 rounded-4 mb-5">
+                            <!-- <div class="card shadow border-0 rounded-4 mb-5">
                                 <div class="card-body p-5">
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
@@ -83,7 +83,7 @@
                                         <div class="col-lg-8"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</div></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </section>
                         <!-- Education Section-->
                         <section>
@@ -94,18 +94,18 @@
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">2015 - 2017</div>
+                                                <div class="text-secondary fw-bolder mb-2">2024 - Present</div>
                                                 <div class="mb-2">
-                                                    <div class="small fw-bolder">Barnett College</div>
-                                                    <div class="small text-muted">Fairfield, NY</div>
+                                                    <div class="small fw-bolder">Nurul Fikri Integrated Technology College</div>
+                                                    <!-- <div class="small text-muted">Fairfield, NY</div> -->
                                                 </div>
                                                 <div class="fst-italic">
-                                                    <div class="small text-muted">Master's</div>
-                                                    <div class="small text-muted">Web Development</div>
+                                                    <div class="small text-muted">Information</div>
+                                                    <div class="small text-muted">Systems</div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</div></div>
+                                        <div class="col-lg-8"><div>Bekerja sama dengan tim untuk merancang dan mengimplementasikan fitur baru berdasarkan umpan balik pengguna.</div></div>
                                     </div>
                                 </div>
                             </div>
@@ -115,18 +115,18 @@
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">2011 - 2015</div>
+                                                <div class="text-secondary fw-bolder mb-2">2021 - 2024</div>
                                                 <div class="mb-2">
-                                                    <div class="small fw-bolder">ULA</div>
-                                                    <div class="small text-muted">Los Angeles, CA</div>
+                                                    <div class="small fw-bolder">State Vocational High School 1 Bojonggede</div>
+                                                    <!-- <div class="small text-muted">Los Angeles, CA</div> -->
                                                 </div>
                                                 <div class="fst-italic">
-                                                    <div class="small text-muted">Undergraduate</div>
-                                                    <div class="small text-muted">Computer Science</div>
+                                                    <div class="small text-muted">Accounting and</div>
+                                                    <div class="small text-muted">Financial Institutions</div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</div></div>
+                                        <div class="col-lg-8"><div>Berdedikasi dengan pemahaman yang kuat tentang prinsip akuntansi dan praktik keuangan. Memiliki keterampilan analitis yang baik dan pengalaman dalam penggunaan perangkat lunak akuntansi [MYOB].</div></div>
                                     </div>
                                 </div>
                             </div>
@@ -145,14 +145,14 @@
                                             <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Professional Skills</span></h3>
                                         </div>
                                         <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">SEO/SEM Marketing</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Statistical Analysis</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Web Development</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Collaboration</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Analys Data</div></div>
+                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">User Interface Design</div></div>
                                         </div>
                                         <div class="row row-cols-1 row-cols-md-3">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Network Security</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Adobe Software Suite</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">User Interface Design</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Team Management</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Creativity</div></div>
+                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Web Development</div></div>
                                         </div>
                                     </div>
                                     <!-- Languages list-->
@@ -168,8 +168,8 @@
                                         </div>
                                         <div class="row row-cols-1 row-cols-md-3">
                                             <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Python</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Ruby</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Node.js</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">PHP</div></div>
+                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">SQL</div></div>
                                         </div>
                                     </div>
                                 </div>
