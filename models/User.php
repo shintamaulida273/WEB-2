@@ -9,56 +9,72 @@ use PDO;
 
 class User
 {
-    private static $connection;
-
-    // Mendapatkan koneksi database
-    private static function getConnection()
-    {
-        if (self::$connection === null) {
-            // Menggunakan metode make() dari kelas Connection untuk mendapatkan koneksi
-            self::$connection = Connection::make();
-        }
-        return self::$connection;
-    }
-
     public static function get()
     {
-        // get all users
-        $stmt = self::getConnection()->prepare("SELECT * FROM users");
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $pdo = Connection::make();
+        $sql = 'SELECT * FROM users';
+        $statement = $pdo->query($sql);
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
+
     public static function create($data)
     {
-        // insert user
-        $stmt = self::getConnection()->prepare("INSERT INTO users (name, email, password) VALUES (:name, :email, :password)");
-        $stmt->bindParam(':name', $data['name']);
-        $stmt->bindParam(':email', $data['email']);
-        $stmt->bindParam(':password', password_hash($data['password'], PASSWORD_DEFAULT)); // Hash the password
-        return $stmt->execute();
+        $pdo = Connection::make();
+        $sql = 'INSERT INTO users (firstname, lastname, gender, age, weight) VALUES (:firstname, :lastname, :gender, :age, :weight)';
+        $statement = $pdo->prepare($sql);
+        $statement->bindParam(':firstname', $data['firstname']);
+        $statement->bindParam(':lastname', $data['lastname']);
+        $statement->bindParam(':gender', $data['gender']);
+        $statement->bindParam(':age', $data['age']);
+        $statement->bindParam(':weight', $data['weight']);
+
+        return $statement->execute();
+
+        // return $statement->execute([
+        //     ':firstname' => $data['firstname'],
+        //     ':lastname' => $data['lastname'],
+        //     ':gender' => $data['gender'],
+        //     ':age' => $data['age'],
+        //     ':weight' => $data['weight'],
+        // ]);
     }
+
     public static function find($id)
     {
-        // find user by id
-        $stmt = self::getConnection()->prepare("SELECT * FROM users WHERE id = :id");
-        $stmt->bindParam(':id', $id);
-        $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        $pdo = Connection::make();
+        $sql = 'SELECT * FROM users WHERE id = :id';
+        $statement = $pdo->prepare($sql);
+        $statement->bindParam(':id', $id);
+        $statement->execute();
+
+        return $statement->fetch(PDO::FETCH_ASSOC);
     }
+
     public static function update($data)
     {
-        // update user by id
-        $stmt = self::getConnection()->prepare("UPDATE users SET name = :name, email = :email WHERE id = :id");
-        $stmt->bindParam(':name', $data['name']);
-        $stmt->bindParam(':email', $data['email']);
-        $stmt->bindParam(':id', $data['id']);
-        return $stmt->execute();
+         $pdo = Connection::make();
+        $sql = 'UPDATE users SET firstname=:firstname, lastname=:lastname, gender=;gender, age=;age, weight=:weight WHERE id=:id';
+        $statement = $pdo->prepare($sql);
+        $statement->bindParam(':id', $data['id']);
+        $statement->bindParam(':firstname', $data['firstname']);
+        $statement->bindParam(':lastname', $data['lastname']);
+        $statement->bindParam(':gender', $data['gender']);
+        $statement->bindParam(':age', $data['age']);
+        $statement->bindParam(':weight', $data['weight']);
+
+        return $statement->execute();
+
     }
+    
+
     public static function delete($id)
     {
-        // delete user by id
-        $stmt = self::getConnection()->prepare("DELETE FROM users WHERE id = :id");
-        $stmt->bindParam(':id', $id);
-        return $stmt->execute();
+        $pdo = Connection::make();
+        $sql = 'DELETE FROM users WHERE id = :id';
+        $statement = $pdo->prepare($sql);
+        $statement->bindParam(':id', $id);
+        $statement->execute();
+
+        return $statement->execute();
     }
 }
