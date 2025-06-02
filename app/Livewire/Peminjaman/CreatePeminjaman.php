@@ -2,51 +2,47 @@
 
 namespace App\Livewire\Peminjaman;
 
+use App\Models\Peminjaman;
 use Livewire\Component;
 use Livewire\Attributes\Validate;
-use App\Models\Peminjaman;
+use App\Models\Ruang;
+use App\Models\Pegawai;
 
 class CreatePeminjaman extends Component
 {
-    #[Validate('required|string|max:10')]
+    #[Validate('required|int')]
     public string $ruang_id = '';
-
-    #[Validate('required|string|max:10')]
-    public string $pegawai_id = '';
-
-    #[Validate('required|string|max:50')]
+    #[Validate('required|int')]
+    public $pegawai_id = '';
+    #[Validate('required|date')]
     public $tanggal = '';
-
-    #[Validate('required|string|max:50')]
+    #[Validate('required|time')]
     public $jam_mulai = '';
-
-    #[Validate('required|string|max:50')]
+    #[Validate('required|time')]
     public $jam_akhir = '';
-
-    #[Validate('required|string|max:50')]
+    #[Validate('required|string|max:100')]
     public $keterangan = '';
 
     public function save()
     {
         $this->validate();
+        Pegawai::create([
+        'ruang_id' => $this->ruang_id,
+        'pegawai_id' => $this->pegawai_id,
+        'tanggal' => $this->tanggal,
+        'jam_mulai' => $this->jam_mulai,
+        'jam_akhir' => $this->jam_akhir,
+        'keterangan' => $this->keterangan,
+    ]);
+    session()->flash('message', 'Peminjaman berhasil ditambahkan.');
 
-        Peminjaman::create([
-            'ruang_id' => $this->ruang_id,
-            'pegawai_id' => $this->pegawai_id,
-            'tanggal' => $this->tanggal,
-            'jam_mulai' => $this->jam_mulai,
-            'jam_akhir' => $this->jam_akhir,
-            'keterangan' => $this->keterangan,
-        ]);
-
-
-        session()->flash('message', 'Peminjaman berhasil ditambahkan.');
-
-        // Reset the form fields 
-        $this->redirectRoute('peminjaman.index');
+    $this->redirectRoute('peminjaman.index');
     }
+
     public function render()
     {
-        return view('livewire.peminjaman.create-peminjaman');
+        $ruangs = Ruang::all();
+        $pegawais = Pegawai::all();
+        return view('livewire.peminjaman.create-peminjaman', compact('ruangs', 'pegawais'));
     }
 }

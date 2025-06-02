@@ -10,7 +10,7 @@ class ListUnitKerja extends Component
     public function render()
     {
         return view('livewire.unit-kerja.list-unit-kerja', [
-            'unitKerjas' => UnitKerja::all()
+            'unit_kerjas' => UnitKerja::all()
         ]);
     }
     public function delete($id)

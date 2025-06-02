@@ -1,63 +1,81 @@
 <div class="container mx-auto">
-    <h1 class="text-2xl font-bold mb-4">Edit Peminjaman</h1>
+    <h1 class="text-2xl font-bold mb-4">Create Peminjaman</h1>
+
     <form wire:submit.prevent="save" class="space-y-4">
-        <flux:input
-            type="text"
+        <flux:select
             id="ruang_id"
             wire:model.defer="ruang_id"
-            label="Kode Ruang"
-            placeholder="Masukkan Kode Ruang"
-            required />
+            label="Ruang"
+            placeholder="Pilih Ruang"
+            required
+            >
+            
+            @foreach ($ruangs as $ruang)
+            <flux:select.option value="{{$ruang->id}}" >
+                {{ $ruang->nama }}
+            </flux:select.option>
+            @endforeach
+        </flux:select>  
 
-        <flux:input
-            type="text"
+        <flux:select
             id="pegawai_id"
             wire:model.defer="pegawai_id"
-            label="Nama Pegawai"
-            placeholder="Masukkan Nama Pegawai"
-            required />
+            label="Pegawai"
+            placeholder="Pilih Pegawai"
+            required
+            >
+            @foreach ($pegawais as $pegawai)
+            <flux:select.option value="{{$pegawai->id}}" >
+                {{ $pegawai->nama }}
+            </flux:select.option>
+            @endforeach
+        </flux:select>
 
-        <flux:input
+            <flux:input
             type="date"
             id="tanggal"
             wire:model.defer="tanggal"
-            label="Pilih Tanggal"
-            required />
+            label="Tanggal Peminjaman"
+            placeholder="Masukkan Tanggal Peminjaman"
+            required
+            />
 
-        <flux:input
+            <flux:input
             type="time"
-            id="jam_mulai"
-            wire:model.defer="jam_mulai"
-            label="Pilih Jam Mulai"
-            required />
+            id="jam"
+            wire:model.defer="jam"
+            label="Jam Mulai"
+            placeholder="Masukkan Jam Mulai"
+            required
+            />
 
-        <flux:input
+            <flux:input
             type="time"
-            id="jam_akhir"
-            wire:model.defer="jam_akhir"
-            label="Pilih Jam Akhir"
-            required />
+            id="jam"
+            wire:model.defer="jam"
+            label="Jam Akhir"
+            placeholder="Masukkan Jam Akhir"
+            required
+            />
 
         <flux:select
             id="keterangan"
             wire:model.defer="keterangan"
-            label="Keterangan"
-            placeholder="Pilih Status Keterangan"
-            required>
-            <flux:select.option value="Diskusi Proyek">Diskusi Proyek</flux:select.option>
-            <flux:select.option value="Koordinasi Tim">Koordinasi Tim</flux:select.option>
-            <flux:select.option value="Pelatihan Karyawan">Pelatihan Karyawan</flux:select.option>
-            <flux:select.option value="Presentasi Produk">Presentasi Produk</flux:select.option>
-            <flux:select.option value="Rapat Anggaran">Rapat Anggaran</flux:select.option>
-            <flux:select.option value="Rapat Evaluasi">Rapat Evaluasi</flux:select.option>
-            <flux:select.option value="Rapat Strategi">Rapat Strategi</flux:select.option>
-            <flux:select.option value="Rapat Tim">Rapat Tim</flux:select.option>
+            label="Keterangan Peminjaman"
+            placeholder="Pilih Keterangan Peminjaman"
+            required
+            >
+            <flux:select.option value="presentasi produk">Presentasi Produk</flux:select.option>
+            <flux:select.option value="tidak tersedia">Diskusi Proyek</flux:select.option>
+            <flux:select.option value="rapat strategi">Rapat Strategi</flux:select.option>
+            <flux:select.option value="koordinasi tim">Koordinasi Tim</flux:select.option>
+            <flux:select.option value="rapat anggaran">Rapat Anggaran</flux:select.option>
         </flux:select>
-
 
         <flux:button
             type="submit"
-            variant="primary">
+            variant="primary"
+            >
             Save
         </flux:button>
     </form>
